@@ -1,0 +1,340 @@
+/***************** GOOGLE FONTS ******************/
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+/***************** GLOBAL SETTINGS ***************/
+
+:root {
+    --Light-red: hsl(0, 100%, 67%);
+    --Light-red-bg: hsla(0, 100%, 67%, 0.1);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Orangey-yellow-bg: hsla(39, 100%, 56%, 0.1);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Green-teal-bg: hsla(166, 100%, 37%, 0.1);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    --Cobalt-blue-bg: hsla(234, 85%, 45%, 0.1);
+
+    /********* Gradients (background) *********/
+
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+
+    /********* Gradients (circle) *********/
+
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+
+    /********* Neutral *********/
+
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+    /********** Font Weight *************/
+
+    --fw-500: 500;
+    --fw-700: 700;
+    --fw-800: 800;
+
+    --main-font: 'Hanken Grotesk';
+
+    --fs-paragraph: 18px;
+    --fs-h1: 28px;
+    --fs-h2: 32px;
+    --fs-sm-card-header: 17px;
+    --fs-lrg-span: 72px;
+    --fs-sm-span: 16px;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img,
+svg {
+    width: 100%;
+    display: block;
+}
+
+
+html {
+    width: 100%;
+    max-width: 1440px;
+    height: 100vh;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: var(--White);
+}
+
+/******** Main Continer ********/
+
+.container {
+    position: relative;
+    width: 700px;
+    height: 100%;
+    max-height: 500px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px var(--Pale-blue);
+    font-family: var(--main-font);
+}
+
+/******** Left Side ********/
+
+.container .left-side {
+    height: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, var(--Light-slate-blue), var(--Light-royal-blue));
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.left-side h1 {
+    color: var(--Light-lavender);
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-500);
+}
+
+.left-side .cirlce {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom,
+    var(--Violet-blue),
+    var(--Persian-blue)
+    );
+    border-radius: 50%;
+}
+
+.cirlce .large-span {
+    color: var(--White);
+    font-size: var(--fs-lrg-span);
+    font-weight: var(--fw-700);
+}
+
+.cirlce .small-span {
+    color: var(--Light-lavender);
+    font-size: var(--fs-sm-span);
+}
+
+.left-side .results-bottom {
+    text-align: center;
+    margin: 20px;
+}
+
+.results-bottom h2 {
+    font-size: var(--fs-h2);
+    color: var(--White);
+    font-weight: var(--fw-700);
+    margin-bottom: 10px;
+}
+
+.results-bottom p {
+    font-size: var(--fs-paragraph);
+    color: var(--Light-lavender);
+}
+
+/******** Right Side ********/
+
+.container .right-side {
+    height: 500px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-side h1 {
+    font-size: var(--fs-h1);
+    color: var(--Dark-gray-blue);
+    margin-bottom: 10px;
+}
+
+.right-side .card-container {
+    width: 80%;
+    height: 100%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card-container .card {
+    position: relative;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+
+.card:hover {
+    transform: scale(.9);
+}
+
+
+.card-container .red {
+    background: var(--Light-red-bg);
+}
+
+.card-container .yellow {
+    background: var(--Orangey-yellow-bg);
+}
+
+.card-container .green {
+    background: var(--Green-teal-bg);
+}
+
+.card-container .blue {
+    background: var(--Cobalt-blue-bg);
+}
+
+.card .card-left {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-left img,
+.card-left h3 {
+    margin: 10px;
+}
+
+.card-left img {
+    width: 25px;
+    height: 25px;
+}
+
+.card-left h3 {
+    font-size: var(--fs-paragraph);
+}
+
+.red h3 {
+    color: var(--Light-red);
+}
+
+.yellow h3 {
+    color: var(--Orangey-yellow);
+}
+
+.green h3 {
+    color: var(--Green-teal);
+}
+
+.blue h3 {
+    color: var(--Cobalt-blue);
+}
+
+.card .card-right {
+    margin: 10px;
+    font-size: var(--fs-sm-span);
+}
+
+.card-right .small-span-dark {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.card-right .small-span-light {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+
+.right-side .button {
+    margin: 30px 0 50px 0;
+}
+
+.btn {
+    width: 90%;
+    text-align: center;
+    background: var(--Dark-gray-blue);
+    color: var(--White);
+    padding: 15px;
+    margin: -20px 0 20px 0;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all .3s ease;
+}
+.btn:hover {
+    background: linear-gradient(to bottom, var(--Light-slate-blue), var(--Light-royal-blue));;
+}
+
+.attribution {
+    margin: 10px;
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: var(--Dark-gray-blue);
+    text-decoration: none;
+  }
+
+
+/* Your existing CSS code */
+
+/* Your existing CSS code */
+
+@media only screen and (max-width: 375px) {
+
+    .mobile {
+        flex-direction: column;
+        width: 100%;
+        max-width: 375px;
+        height: 100%;
+        max-height: 900px;
+    }
+
+    .mobile .left-side {
+        max-width: 90%;
+        height: 400px;
+       
+    }
+
+    .left-side h1,
+    .right-side h1 {
+        font-size: 20px;
+    }
+
+    .left-side .cirlce {
+        width: 100px;
+        height: 100px;
+        margin: 0;
+    }
+
+    .cirlce .large-span {
+        font-size: 25px;
+    }
+
+    .right-side .card-container {
+        margin-bottom: 25px;
+    }
+
+    .right-side .card {
+        margin-bottom: 5px;
+    }
+}
